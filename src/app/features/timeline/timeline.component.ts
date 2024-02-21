@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../../shared/models/post';
 import { PostComponent } from '../../shared/components/posts/post/post.component';
-import { PostService } from '../../core/service/post.service';
+import { PostService } from '../../core/services/post.service';
 
 @Component({
   selector: 'app-timeline',
