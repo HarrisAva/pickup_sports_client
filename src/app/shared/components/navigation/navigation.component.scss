@@ -21,6 +21,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .navbar .nav-links a:hover,
@@ -28,4 +29,56 @@
   color: white;
   background-color: #FFA500;
   border-radius: 4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 1rem;
+}
+
+.menu-container{
+  transition: width 0.3s ease;
+  width: 2rem
+}
+
+// # move Timeline and Events to the left when menu is clicked and sidebar is visible
+.menu-container.active{
+  width: 275px;
+}
+.menu {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid lightskyblue;
+  transition: right 0.3s ease;
+}
+
+//when clicking at menu icon, sidebar is active and display (unhide) -> from -250px to 0px
+.sidebar.active {
+  right: 0px;
+}
+
+.sidebar a{
+  display: block;
+  padding: 10px;
+  border-bottom: 1x solid #ccc;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover{
+  background-color: #ccc;
 }

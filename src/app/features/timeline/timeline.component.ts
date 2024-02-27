@@ -22,7 +22,7 @@ export class TimelineComponent implements OnInit{
         this.posts = posts;
       },
       error: (error:any) => {
-        console.error('Error fething timeline posts', error);
+        console.error('Error fetching timeline posts', error);
       },
     });
 
