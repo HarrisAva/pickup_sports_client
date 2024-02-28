@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: '../auth.shared.scss'
 })
 export class LoginComponent {
 
@@ -28,8 +28,6 @@ export class LoginComponent {
 
       this.authService.login(username, password).subscribe({
         next: (res:any) => {
-          console.log(res);
-          this.authService.setToken(res.token) // save token to local storage
           this.router.navigate(['/'])
         },
         error: (error:any) => {

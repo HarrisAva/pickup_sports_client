@@ -18,6 +18,12 @@ export const routes: Routes = [
   path: 'login',
   loadComponent: () => import("./features/auth/login/login.component").then((c) => c.LoginComponent),
   canActivate: [noAuthGuard] // implement no-auth to this page (no need token to access)
+},
+
+{
+  path: 'signup',
+  loadComponent: () => import("./features/auth/signup/signup.component").then((c) => c.SignupComponent),
+  canActivate: [noAuthGuard] // implement no-auth to this page (no need token to access)
 }
 ];
  // structure of lazy loading

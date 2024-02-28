@@ -2,6 +2,9 @@
   <div class="brand-name">Pickup Sports</div>
   <div class="nav-links">
     @if (isLoggedIn()) {
+
+    <span>Welcome, {{ currentUser?.username }}</span>
+    <!-- 'currentUser?'' is for optional -->
     <a (click)="logout()">Logout</a>
 
     <div class="menu-container" [class.active]="isSidebarVisible">
@@ -10,6 +13,7 @@
 
     }@else {
     <a routerLink="/login">Login</a>
+    <a routerLink="/signup">Sign Up</a>
     }
   </div>
 </nav>
