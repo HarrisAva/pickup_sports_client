@@ -15,6 +15,16 @@ export const routes: Routes = [
   canActivate: [authGuard] // need token to access (isLoggedIn)
 },
 {
+  path: 'create-event',
+  loadComponent: () => import("./features/create-event/create-event.component").then((c) => c.CreateEventComponent),
+  canActivate: [authGuard] // need token to access (isLoggedIn)
+},
+{
+  path: 'events/:id',
+  loadComponent: () => import("./features/event-details/event-details.component").then((c) => c.EventDetailsComponent),
+  canActivate: [authGuard] // need token to access (isLoggedIn)
+},
+{
   path: 'login',
   loadComponent: () => import("./features/auth/login/login.component").then((c) => c.LoginComponent),
   canActivate: [noAuthGuard] // implement no-auth to this page (no need token to access)

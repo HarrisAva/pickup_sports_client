@@ -9,3 +9,78 @@
 body{
   font-family: 'Arial', sans-serif;
 }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 52px);
+  align-items: center;
+  background-color: #f0f0f0;
+
+}
+
+form{
+  width: 400px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+form input {
+  flex: 1;
+}
+
+label {
+  margin-right: 0.5rem;
+  width: 100px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+input {
+  padding: .75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #222;
+  background-color: white;
+  font-weight: bold;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: .75rem;
+  border: none;
+  background-color: rgb(0, 157, 255);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+button:hover{
+  background-color: rgb(0, 94, 255);
+}
+
+button:disabled {
+  background-color: rgb(129, 200, 244);
+}
+
+.error{
+  color: red;
+}
+
